@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamic-intermodal"
+version = "0.1.0"
+description = "Dynamic optimisation of intermodal transport plans under multi-source uncertainty"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "openpyxl",
+    "scipy",
+    "gurobipy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["dynamic_intermodal*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
